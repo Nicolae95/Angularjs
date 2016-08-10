@@ -1,0 +1,15 @@
+
+<div id="List">
+     <h4>Tasks:</h4>
+        <ul ng-repeat="task in taskctrl.tasks" class="item">
+            <li ng-class="{'checked': task.made, 'unchecked' : !task.made}">
+                <b>Task: </b>
+                <b>amount:</b> {{task.amount}}
+                <b>name:</b> {{task.name}}
+                <input type="checkbox" name="checkbox" ng-model="task.made" ng-change="taskctrl.updatemade($index+1)" ng-true-value="1" ng-false-value="0">
+                <button ng-click="taskctrl.deletetask($index+1)">x</button>
+            </li>
+        </ul>
+        <pre>
+        </pre>
+</div>

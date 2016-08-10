@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="data">
+<head>
+    <link rel=stylesheet href="css/app.css" type="text/css">
+</head>
+<body ng-controller="TasksCtrl as taskctrl">
+<div id="results">
+    <button ng-click="taskctrl.showAdd()">New task</button>
+
+    <div id="AddItem" ng-show="taskctrl.DisplayAdd">
+        <h3>Add task</h3>
+        <input value="1" type="number" placeholder="1" ng-model="taskctrl.itemAmount">
+        <input value="" type="text" placeholder="Name of the task" ng-model="taskctrl.itemName">
+        <button ng-click="taskctrl.addtask()">Add</button>
+        {{taskctrl.message}}
+    </div>
+    <br>
+    <br>
+    <tr>
+        <button ng-click="taskctrl.tablelist('temp/block.html')">Block</button>
+        <button ng-click="taskctrl.tablelist('temp/list.html')">List</button>
+    </tr>
+
+    <div class="elements" ng-include="taskctrl.block"></div>
+</div>
+
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+    <script src="js/ctrls/taskctrl.js" charset="utf-8"></script>
+</body>
+</html>
