@@ -1,0 +1,25 @@
+{
+  "name": "tasks",
+  "homepage": "https://github.com/Nicolae95/Mysql-server",
+  "authors": [
+    "Nick955 <nicolae.botnaru@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

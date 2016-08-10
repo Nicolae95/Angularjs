@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="data">
+<head>
+    <link rel=stylesheet href="app.css" type="text/css">
+</head>
+<body ng-controller="CalculatorCtrl as calc">
+
+    <div>
+        <tr>
+            <div>
+                <input type="number" ng-model="calc.first">
+            </div>
+            <div>
+                <input type="number" ng-model="calc.second">
+            </div>
+        </tr>
+
+        <tr>
+            <button ng-click="calc.sum()">+</button>
+            <button ng-click="calc.min()">-</button>
+            <button ng-click="calc.prod()">*</button>
+            <button ng-click="calc.div()">/</button>
+        </tr>
+        <div class="blue">
+            {{ calc.calculator }}
+        </div>
+    </div>
+<br>
+    <textarea name="name" rows="8" cols="40" ng-model="calc.text"></textarea>
+    <br>
+    <button ng-click="calc.textfun()">Send</button>
+    <br>
+
+    Letters : {{ calc.len }} <br>
+    Words : {{ calc.words }} </br>
+    Spaces : {{calc.words - 1}}
+    <script src="angular.js" charset="utf-8"></script>
+    <script src="controller.js" charset="utf-8"></script>
+</body>
+</html>

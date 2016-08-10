@@ -1,0 +1,16 @@
+
+<div id="Block">
+     <h4>Tasks:</h4>
+    <table>
+        <div ng-repeat="task in taskctrl.tasks" class="item">
+            <div class="task" ng-class="{'checked': task.made, 'unchecked' : !task.made}">
+                <b>Task: </b>
+                <b>amount:</b> {{task.amount}}
+                <b>name:</b> {{task.name}}
+                <input type="checkbox" name="checkbox" value="" ng-model="task.made">
+                <button ng-click="taskctrl.deletetask($index)">x</button>
+            </div>
+
+        </div>
+    </table>
+</div>
