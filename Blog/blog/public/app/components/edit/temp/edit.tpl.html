@@ -1,0 +1,13 @@
+<div id="results"><h2>Edit Article</h2>
+   <input type="hidden" data-ng-model="editctrl.newdata.EntryId" />
+   <b>Title:</b><br>
+   <input type="text" name="Title" id="Title" class="form-control" ng-model="editctrl.newdata.Title" placeholder="Title" required /><br>
+   <b>Author:</b><br>
+   <input type="text" name="Author" id="Author" class="form-control" ng-model="editctrl.newdata.Author" placeholder="Author" required /><br>
+   <b>Text:</b><br>
+   <textarea type="text" name="Text" id="Text" class="form-control" ng-model="editctrl.newdata.Text" placeholder="Text" required /></textarea>
+   <br />
+   <button type="button" class="btn btn-primary" data-ng-click="editctrl.updatedata('PUT')"> Update </button>
+   <br />
+   <p>{{editctrl.status}}</p>
+</div>

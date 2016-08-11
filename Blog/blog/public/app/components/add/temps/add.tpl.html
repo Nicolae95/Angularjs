@@ -1,0 +1,11 @@
+<div id="results">
+    <form role="form" ng-submit="editctrl.updatedata('POST')">
+        Title   <br><input type="text" name="name" class="form-control" data-ng-model="editctrl.newdata.Title">
+        Author  <br><input type="text" name="name" class="form-control" data-ng-model="editctrl.newdata.Author">
+        Text    <br><textarea type="text" name="name" class="form-control" data-ng-model="editctrl.newdata.Text"></textarea><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    {{editctrl.message}}
+
+</div>

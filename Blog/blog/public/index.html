@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="data">
+<head>
+    <link rel=stylesheet href="app/css/app.css" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home">Blog</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a ui-sref="home">Home</a>
+                <li><a ui-sref="add">Add</a>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <div ui-view></div>
+
+    <script src="libs/angular.js" charset="utf-8"></script>
+    <script src="libs/angular-ui-router.js" charset="utf-8"></script>
+    <script src="libs/dirPagination.js" charset="utf-8"></script>
+    <script src="app/components/app.module.js" charset="utf-8"></script>
+    <script src="app/components/app.routers.js" charset="utf-8"></script>
+    <script src="app/components/main/ctrls/main.ctrl.js" charset="utf-8"></script>
+    <script src="app/components/add/ctrls/add.ctrl.js" charset="utf-8"></script>
+    <script src="app/components/detail/ctrls/detail.ctrl.js" charset="utf-8"></script>
+    <script src="app/components/edit/ctrls/edit.ctrl.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<div id="results">
+Search by Author : <input type="text" ng-model="mainctrl.Author">
+<br>
+    <div class="element" dir-paginate='data in mainctrl.alldata | filter:mainctrl.Author | itemsPerPage: 3'>
+        <h2 class="blue"><a href="/#/detail/{{data.EntryId}}">{{data.Title}}</a></h2>
+        <div>Author : <i>{{data.Author}}</i></div>
+        <div>{{data.Text}}</div>
+        <div><a class="green" href="/#/edit/{{data.EntryId}}">Edit</a><a class="red" ng-click="mainctrl.deletedata(data.EntryId)"> Delete</a></div>
+   </div>
+   <dir-pagination-controls></dir-pagination-controls>
+</div>
